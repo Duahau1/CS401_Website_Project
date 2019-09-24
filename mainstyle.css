@@ -1,0 +1,231 @@
+/*#page {
+    position:fixed;
+    width:100%; 
+    height:100%; 
+    border:32px solid #fff; 
+    box-sizing:border-box; 
+    overflow:hidden;
+    z-index: -1;
+}
+#Holder > div {
+    position:relative; 
+    height:100%; 
+    display:inline-block
+}
+#pano {position:relative; 
+    display:block; 
+    top:0; 
+    left:0;
+    height:100%
+}
+*/
+html, body {
+    margin:0; 
+    padding:0; 
+    width:100%; 
+    height:100%;
+}
+
+#page {
+   position:relative;
+   width:100%; 
+   height:100%;
+   background-image:url(img/interior1.jpg); 
+   background-size:cover;
+   background-repeat: no-repeat;
+   background-position:center center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+}
+li{
+position:relative;
+display:inline;
+font-size:20emv;
+font-family: 'Inconsolata', monospace;
+}
+#logo{
+    height:500px;
+    width:500px;
+    z-index:1;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:-70px;
+    left:-20px;
+}
+
+.navCats {
+    position:fixed; 
+    bottom:32px; 
+    margin:0 auto; 
+    left:0; 
+    right:0; 
+    text-align:center;
+    z-index: =2;
+}
+.navCats ul {
+    list-style:none; 
+    margin:0; 
+    padding:0;
+    z-index: 2;
+
+}
+.navCats li {
+    display:inline-block; 
+    padding:1%; 
+    color:#fff; 
+    font-size:22pt; 
+    border-bottom:1vh solid transparent; 
+    cursor:pointer; 
+    font-weight:700;
+    z-index: 2;
+}
+.navCats li.active {
+    border-bottom:1vh solid #fff;
+}
+.navCats a {
+    color:#fff; 
+    text-decoration:none;
+     z-index: 2;
+
+}
+
+/*Loginbox*/
+.loginbox{
+    width: 60%;
+    background: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+    display:inline-block;
+    color:#8c8c8c;
+    position: absolute;
+    top:65%;
+    right:-15%;
+    transform: translate(-50%,-70%);
+    padding: 4.9vw 2.1vw;
+    border-style: solid  ;
+    border-width: 10px;
+    padding-bottom: 20px;
+    opacity: 1;
+    z-index: 2;
+}
+.logo{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:-25%;
+    left:calc(42%);
+
+}
+.loginbox ul{
+    margin:0;
+    padding:0;
+    position:absolute;
+    right:17%;
+    top:80%;
+}
+.loginbox li{
+    margin:0.21vw;
+    padding:0;
+    list-style-type: none;
+    letter-spacing: 0.049vw;
+    display:inline;     
+}
+.loginbox p{
+    margin:0;
+    padding:0;
+    font-weight: bold;    
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 1.4vw;
+}
+.loginbox input[type="text"],[type="password"]{
+    border:none;
+    border-bottom:0.07vw solid #fff;
+    background: transparent;
+    outline:none;
+    height:1.7vw;
+    color:black;
+    font-size:1.05vw;
+}
+.loginbox input[type="submit"]{
+    border:none;
+    outline:none;
+    height:15%;
+    background: #8c8c8c;
+    font: 400 20px/1.3 'Oleo Script', Helvetica, sans-serif;
+    color: #fff;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    border-radius: 1.39vw;
+}
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color:#000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size:0.97vw;
+    line-height:0.7vw;
+    color:darkgrey;
+}
+
+#log{
+    text-align: center;
+    font-size: 15px;
+}
+#logNav a{
+    opacity: 0.7;
+    color:black;
+
+}
+#logNav li.active {
+    opacity: 0.7;
+    border-bottom:1vh solid black;
+}
+
+#signuplogo{
+   position:absolute;
+    top:-24%;
+    left:calc(40%);
+}
+.login::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+   width:100%; 
+   height:100%;
+   background-image:url(img/interior1.jpg); 
+   background-size:cover;
+   background-repeat: no-repeat;
+   background-position:center center;
+}
+#feedback a{
+    opacity: 0.7;
+    color:black;
+
+}
+#feedback li.active {
+    opacity: 0.7;
+    border-bottom:1vh solid black;
+}
+.hotspot{
+    position:relative;
+    left:35%; 
+    top:48%; 
+    height:20%;
+z-index: 2;
+}
