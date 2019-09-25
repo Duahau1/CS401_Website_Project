@@ -1,29 +1,12 @@
-/*#page {
-    position:fixed;
-    width:100%; 
-    height:100%; 
-    border:32px solid #fff; 
-    box-sizing:border-box; 
-    overflow:hidden;
-    z-index: -1;
-}
-#Holder > div {
-    position:relative; 
-    height:100%; 
-    display:inline-block
-}
-#pano {position:relative; 
-    display:block; 
-    top:0; 
-    left:0;
-    height:100%
-}
-*/
+
 html, body {
     margin:0; 
     padding:0; 
     width:100%; 
     height:100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
 }
 
 #page {
@@ -34,6 +17,7 @@ html, body {
    background-size:cover;
    background-repeat: no-repeat;
    background-position:center center;
+   overflow-x: hidden;
 }
 
 ul {
@@ -115,12 +99,11 @@ font-family: 'Inconsolata', monospace;
     z-index: 2;
 }
 .logo{
-    width:100%;
+    width:50%;
     height: 100%;
     position:absolute;
     top:-25%;
-    left:calc(42%);
-
+    left:calc(60%);
 }
 .loginbox ul{
     margin:0;
@@ -194,7 +177,7 @@ font-family: 'Inconsolata', monospace;
 #signuplogo{
    position:absolute;
     top:-24%;
-    left:calc(40%);
+    left:calc(60%);
 }
 .login::before{
     content: ' ';
@@ -212,6 +195,7 @@ font-family: 'Inconsolata', monospace;
    background-size:cover;
    background-repeat: no-repeat;
    background-position:center center;
+    overflow: hidden;
 }
 #feedback a{
     opacity: 0.7;

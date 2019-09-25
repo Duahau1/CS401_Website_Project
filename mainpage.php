@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html> 
+ <head> 
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+     <meta charset="utf-8" />
+          <link rel='icon' href='img/favicon.png' type='image/x-icon'/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <title>TiniCafe</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css"> 
+ </head> 
+<body>
+
+<div id="page">
+
+<a href="recipes/espresso.php" class="hotspotLink" ><img class="hotspot" src="img/cappuccino.svg"></a>
+<a href="recipes/coldbrew.php" class="hotspotLink" ><img class="hotspot1" src="img/coffee%20pot.svg"></a>
+<a href="recipes/pourover.php" class="hotspotLink" ><img class="hotspot2" src="img/iced%20tea.svg"></a>
+<a href="recipes/croissant.php" class="hotspotLink" ><img class="hotspot3" src="img/croissant.svg"></a>
+
+
+<nav class="navCats">
+<ul>
+<li class=""><a href="login.php">USER</a></li>
+<li class="active"><a href="mainpage.php">MAIN</a></li>
+<li class=""><a href="feedback.php">FEEDBACK</a></li>
+</ul>
+  </nav>    
+</div>  		
+
+    </body>
+</html>

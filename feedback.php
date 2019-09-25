@@ -4,6 +4,8 @@
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
      <meta charset="utf-8" />
+          <link rel='icon' href='img/favicon.png' type='image/x-icon'/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <title>TiniCafe</title>
     <link rel="stylesheet" type="text/css" href="mainstyle.css"> 
@@ -25,9 +27,9 @@
         </div> 
     <nav class="navCats" id="feedback">
 <ul>
-<li class=""><a href="login.html">USER</a></li>
-<li class=""><a href="mainpage.html">MAIN</a></li>
-<li class="active"><a href="feedback.html">FEEDBACK</a></li>
+<li class=""><a href="login.php">USER</a></li>
+<li class=""><a href="mainpage.php">MAIN</a></li>
+<li class="active"><a href="feedback.php">FEEDBACK</a></li>
 </ul>
     </nav>
 </body>

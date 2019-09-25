@@ -5,6 +5,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
      <meta charset="utf-8" />
+          <link rel='icon' href='img/favicon.png' type='image/x-icon'/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <title>TiniCafe</title>
     <link rel="stylesheet" type="text/css" href="../mainstyle.css"> 
@@ -31,7 +33,7 @@
     <li>Step five:Enjoy!</li>
     </ul>
     </div>
-    <a href="../mainpage.html"> <img src="../img/x.svg" alt="X" id="closeButton"></a>
+    <a href="../mainpage.php"> <img src="../img/x.svg" alt="X" id="closeButton"></a>
     <div class="tooltip">
     <a href="#"> <img src="../img/add.png" alt="X" id="addButton"></a>
         <span class="tooltiptext">Add to your repository</span> </div>

@@ -5,6 +5,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
      <meta charset="utf-8" />
+          <link rel='icon' href='img/favicon.png' type='image/x-icon'/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <title>TiniCafe</title>
     <link rel="stylesheet" type="text/css" href="../mainstyle.css"> 
@@ -27,12 +29,11 @@
     <li>Step four:After the bloom, start pouring the remaining hot water over the coffee in small circles. Focus your pouring mostly in the inner circle, pouring near the edges occasionally to consistently wet the grounds. For the first round, pour about 200ml water.</li>  
     <li>Step five:If you pour slowly enough, you can maintain a constant pour and let it filter at the same rate (which is ideal for optimal flavor). Or you can pour in ~200ml batches at a time. However, try to never let the grounds go completely dry. Total pour time should take 3.5 minutes.</li>
    <li>Step six:Once brewed, remove filter and enjoy coffee. Bonus tip: Before pouring coffee, warm your cup using any leftover hot water. Just be sure to dump the excess water before enjoying your coffee. Enjoy fresh, or cover and refrigerate up to 24 hours.
-
  </li>
         <li>Step seven:Enjoy!</li>
     </ul>
     </div>
-    <a href="../mainpage.html"> <img src="../img/x.svg" alt="X" id="closeButton"></a>
+    <a href="../mainpage.php"> <img src="../img/x.svg" alt="X" id="closeButton"></a>
     <div class="tooltip">
     <a href="#"> <img src="../img/add.png" alt="X" id="addButton"></a>
         <span class="tooltiptext">Add to your repository</span> </div>
