@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<?php
+session_start();
+echo print_r($_SESSION,1);
+?>
 <html> 
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
@@ -12,17 +15,18 @@
  </head> 
 <body class="login">
    <div class="loginbox">
-
+            <img src="iconpasswd.png" class="info" title=" minimum of eight (8) character in length.">  
             <img src="logo.svg" class="logo" id="signuplogo">
             <h1>Sign up here</h1>  
-            <form>
+            <form method="POST" action="signup_handlers.php">
             <p>Username</p>
-            <input type="text" name="username" placeholder="Enter your username" required>
+            <input type="text" name="username" placeholder="Enter your username">
             <p>Password</p>
-            <input type="password" name="pswd" placeholder="Enter your password" required>    
+            <input type="password"  name="pswd" placeholder="Enter your password">    
             <p>Repeat Password</p>
-             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+             <input type="password" name="confirmed_passwd" placeholder="Repeat Password" name="psw-repeat">
                 <input name="" type="submit" value="Login">
+                
                 <div id="log"><a href="login.php">Back to log in page</a></div>
             </form>
         </div> 
@@ -33,4 +37,12 @@
 <li class=""><a href="feedback.php">FEEDBACK</a></li>
 </ul>
     </nav>
+ <?php
+    if (isset($_SESSION['messages'])) {
+       foreach ($_SESSION['messages'] as $message) {
+         echo "<div class='message {$_SESSION['sentiment']}'>{$message}</div>";
+       }
+    }
+    ?>
+
 </body>
