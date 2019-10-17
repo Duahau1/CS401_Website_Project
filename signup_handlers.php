@@ -28,6 +28,7 @@ if(empty($_POST['confirmed_passwd'])){
 unset($_SESSION['messages']);
 $_SESSION['messages'] = array("Your account has been created");
  $_SESSION['sentiment'] = 'good';
-   header("Location: http://cs401/mainpage.php");
+   header("Location: http://cs401/Signup.php");
+
 ?>
 

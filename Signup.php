@@ -41,6 +41,7 @@ echo print_r($_SESSION,1);
     if (isset($_SESSION['messages'])) {
        foreach ($_SESSION['messages'] as $message) {
          echo "<div class='message {$_SESSION['sentiment']}'>{$message}</div>";
+           unset($_SESSION['messages']);
        }
     }
     ?>
