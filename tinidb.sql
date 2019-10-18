@@ -1,0 +1,14 @@
+DROP DATABASE IF EXISTS CS401;
+CREATE DATABASE CS401;
+USE CS401;
+
+CREATE TABLE Users(
+userID int NOT NULL Primary key auto_increment ,
+username VARCHAR(256) NOT NULL,
+passwd VARCHAR(80) NOT NULL
+);
+
+SELECT * FROM Users;
+
+
+

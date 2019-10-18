@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-//echo print_r($_SESSION,1);
+echo print_r($_SESSION,1);
 ?>
 <html> 
  <head> 
@@ -20,7 +20,7 @@ session_start();
             <img src="iconpasswd.png" class="info" title=" minimum of eight (8) character in length.">  
             <img src="logo.svg" class="logo" id="signuplogo">
             <h1>Sign up here</h1>  
-            <form method="POST" action="signup_handlers.php">
+            <form method="POST" action="signup_handlers.php" >
             <p>Username</p>
             <input type="text" name="username" placeholder="Enter your username">
             <p>Password</p>
@@ -46,6 +46,6 @@ session_start();
            unset($_SESSION['messages']);
        }
     }
+   
     ?>
-
 </body>
