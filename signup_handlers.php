@@ -4,19 +4,24 @@ session_start();
 $messages =array();
 $sentiment='';
 
-if( $_POST['pswd']!= $_POST['confirmed_passwd'] ) {
+if(( $_POST['pswd']!= $_POST['confirmed_passwd'] )&&!(strlen($_POST['pswd'])<8)) {
     $messages[]=" * Your retyped password does not match";
 }
-if(empty($_POST['username'])){
-    $messages[]=" * Your username field is empty";
+
+if( strlen($_POST['pswd'])<8){
+    $messages[]=" * Minimum of 8 characters";
 }
 
-if( empty($_POST['pswd'])){
-    $messages[]=" * Your password field is empty";
-}
-
-if(empty($_POST['confirmed_passwd'])){
+if(empty($_POST['confirmed_passwd'])&&!(strlen($_POST['pswd'])<8)){
     $messages[]="* Your confirmed password field is empty";
+}
+if((preg_match('/^[a-zA-Z0-9]{6,64}$/', $_POST['username'])===0)||empty($_POST['username'])) { // for english chars + numbers only
+    // valid username, alphanumeric & longer than or equals 5 chars
+    $messages[]="* Username:  must be between 6-64 characters, no special character";
+        $messages[]="* Username:  must be between 6-64 characters, no special character";
+
+        $messages[]="* Username:  must be between 6-64 characters, no special character";
+
 }
 
   if (count($messages) > 0) {
@@ -26,7 +31,8 @@ if(empty($_POST['confirmed_passwd'])){
      exit;
    }
 unset($_SESSION['messages']);
-$_SESSION['messages'] = array("Your account has been created");
+$info="Click"."<a href=\"login.php\"> here </a>". " to Log In ";
+$_SESSION['messages'] = array(" * Your account has been created {$info}");
  $_SESSION['sentiment'] = 'good';
    header("Location: http://cs401/Signup.php");
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <?php
 session_start();
-echo print_r($_SESSION,1);
+//echo print_r($_SESSION,1);
 ?>
 <html> 
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+
      <meta charset="utf-8" />
           <link rel='icon' href='img/favicon.png' type='image/x-icon'/>
 
@@ -24,8 +26,8 @@ echo print_r($_SESSION,1);
             <p>Password</p>
             <input type="password"  name="pswd" placeholder="Enter your password">    
             <p>Repeat Password</p>
-             <input type="password" name="confirmed_passwd" placeholder="Repeat Password" name="psw-repeat">
-                <input name="" type="submit" value="Login">
+             <input type="password" name="confirmed_passwd" placeholder="Repeat Password">
+                <input name="" type="submit" value="Submit">
                 
                 <div id="log"><a href="login.php">Back to log in page</a></div>
             </form>

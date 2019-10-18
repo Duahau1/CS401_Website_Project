@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+session_start();
+?>
 <html> 
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
