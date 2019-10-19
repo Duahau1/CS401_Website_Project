@@ -40,6 +40,17 @@ public function saveUser($userName,$passWord){
     $q->execute();
  }
 
+    public function isExist($userName){
+         $conn = $this-> getConnection();
+         $sql="select username from Users where username=:userName";
+         $q = $conn-> prepare($sql);
+         $q->bindParam(':userName', $userName);
+         $count=$q->rowCount();
+         if(count>0){
+             return true;
+         }
+        
+    }
 }
  $dao = new Dao();
  $pro= $dao-> getConnection();

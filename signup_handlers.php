@@ -22,9 +22,16 @@ if((preg_match('/^[a-zA-Z0-9]{6,64}$/', $_POST['username'])===0)||empty($_POST['
     $messages[]="* Username:  must be between 6-64 characters, no special character";
 
 }
-   if(count($messages) <1){
+$res_u= new Dao();
+$u_taken= $res_u->isExist($user);
+if(u_taken){
+     $messages[]=" * This username has already been taken.Please choose a different one";
+}
+   
+  if(count($messages) <1){
     $dao =new Dao();
-    $dao->saveUser($user,$pass);
+    $hashpass=password_hash($pass,PASSWORD_DEFAULT);
+    $dao->saveUser($user,$hashpass);
    }
   if (count($messages) > 0) {
      $_SESSION['messages'] = $messages;
