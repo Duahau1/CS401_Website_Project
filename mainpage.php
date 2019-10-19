@@ -23,12 +23,21 @@ session_start();
 <?php
     if(isset($_SESSION['user'])){
            echo "<div class='message' id='loggedin'>Welcome {$_SESSION['user']}</div>";
+          // echo"<script>document.getElementById(\"logged\").href=\"userprofile.php\"</script>";
     }
     ?>
 
 <nav class="navCats">
 <ul>
-<li class=""><a href="login.php">USER</a></li>
+<li class=""><a id="logged" href="login.php">USER</a></li>
+<?php
+    if(isset($_SESSION['user'])){
+           echo"<script>document.getElementById(\"logged\").href=\"userprofile.php\"</script>";
+    }
+    else {
+          echo"<script>document.getElementById(\"logged\").href=\"login.php\"</script>";
+    }
+    ?>
 <li class="active"><a href="mainpage.php">MAIN</a></li>
 <li class=""><a href="feedback.php">FEEDBACK</a></li>
 </ul>

@@ -13,8 +13,12 @@ if($validation==False){
     $notifications[]="* Wrong username or password.";
     $_SESSION['notifications'] = $notifications;
     $_SESSION['sentiment'] = 'bad';
+    $_SESSION["access_granted"] = false;
      header("Location: http://cs401/login.php");
      exit;
+}
+else{
+    $_SESSION["access_granted"] = true;
 }
 unset($_SESSION['notifications']);
 $_SESSION['user']=$user;
