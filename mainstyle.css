@@ -348,3 +348,17 @@ font-family:sans-serif;
 font-weight:bold;
 background-color: white;
 }
+#loggedin{
+  z-index: 2; 
+  position:absolute;
+botton:0;
+float:left;
+font-size: 25pt;
+font-family: 'Inconsolata', monospace;
+font-weight:700;
+color:#fff;
+    margin-top:10px;
+    margin-left:20px;
+    background-color:darkgrey;
+    padding:0 10px;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
+echo print_r($_SESSION,1);
 ?>
 <html> 
  <head> 
@@ -17,11 +18,11 @@ session_start();
 
             <img src="logo.svg" class="logo">
             <h1>Login here</h1>  
-            <form>
+            <form method="POST" action="login_handlers.php">
             <p>Username</p>
-            <input type="text" name="username" placeholder="Enter your username" required>
+            <input type="text" name="logusername" placeholder="Enter your username" required>
             <p>Password</p>
-            <input type="password" name="pswd" placeholder="Enter your password" required>    
+            <input type="password" name="logpswd" placeholder="Enter your password" required>    
             <input name="" type="submit" value="Login">
                 <div id="log"><a href="Signup.php">Don't have an account?</a></div>
             </form>
@@ -33,4 +34,13 @@ session_start();
 <li class=""><a href="feedback.php">FEEDBACK</a></li>
 </ul>
     </nav>
+     <?php
+    if (isset($_SESSION['notifications'])) {
+       foreach ($_SESSION['notifications'] as $message) {
+         echo "<div class='message {$_SESSION['sentiment']}'>{$message}</div>";
+           unset($_SESSION['notifications']);
+       }
+    }
+   
+    ?>
 </body>

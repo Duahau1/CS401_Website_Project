@@ -12,10 +12,6 @@ private $password = 'Denny';
       echo print_r($e,1);
     }
     echo print_r("Connection Success",1);
-     
-    // $saveQuery = "insert into Users (userID,username,passwd) values (0,'hello','wprld')";
-   //   $q = $connection-> prepare($saveQuery);
-    //  $q->execute();
 
      return $connection;
   } 
@@ -45,12 +41,33 @@ public function saveUser($userName,$passWord){
          $sql="select username from Users where username=:userName";
          $q = $conn-> prepare($sql);
          $q->bindParam(':userName', $userName);
+         $q->execute();
          $count=$q->rowCount();
-         if(count>0){
+         echo $count;
+         if($count>0){
              return true;
          }
+        else{
+            return false;
+        }
         
     }
+public function getLogIn($userName,$passWord){
+    $conn = $this-> getConnection(); 
+    $sql="select passwd from Users where username=:userName" ;
+    $q = $conn-> prepare($sql);
+    $q->bindParam(':userName', $userName);
+     $q->execute();
+    $passverify=password_verify($passWord, $q->fetchColumn());
+    if($passverify==True){
+        return true;
+    }
+    else{
+        return false;
+    }
+   
+}
+
 }
  $dao = new Dao();
  $pro= $dao-> getConnection();

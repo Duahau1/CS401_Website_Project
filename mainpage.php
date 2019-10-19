@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html> 
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
@@ -17,7 +20,11 @@
 <a href="recipes/coldbrew.php" class="hotspotLink" ><img class="hotspot1" src="img/coffee%20pot.svg"></a>
 <a href="recipes/pourover.php" class="hotspotLink" ><img class="hotspot2" src="img/iced%20tea.svg"></a>
 <a href="recipes/croissant.php" class="hotspotLink" ><img class="hotspot3" src="img/croissant.svg"></a>
-
+<?php
+    if(isset($_SESSION['user'])){
+           echo "<div class='message' id='loggedin'>Welcome {$_SESSION['user']}</div>";
+    }
+    ?>
 
 <nav class="navCats">
 <ul>

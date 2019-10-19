@@ -24,7 +24,7 @@ if((preg_match('/^[a-zA-Z0-9]{6,64}$/', $_POST['username'])===0)||empty($_POST['
 }
 $res_u= new Dao();
 $u_taken= $res_u->isExist($user);
-if(u_taken){
+if($u_taken==True){
      $messages[]=" * This username has already been taken.Please choose a different one";
 }
    
