@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+session_start();
+?>
 <html> 
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
@@ -27,7 +29,15 @@
         </div> 
     <nav class="navCats" id="feedback">
 <ul>
-<li class=""><a href="login.php">USER</a></li>
+<li class=""><a id="logged" href="login.php">USER</a></li>
+<?php
+    if(isset($_SESSION['user'])){
+           echo"<script>document.getElementById(\"logged\").href=\"userprofile.php\"</script>";
+    }
+    else {
+          echo"<script>document.getElementById(\"logged\").href=\"login.php\"</script>";
+    }
+    ?>
 <li class=""><a href="mainpage.php">MAIN</a></li>
 <li class="active"><a href="feedback.php">FEEDBACK</a></li>
 </ul>
