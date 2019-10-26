@@ -314,3 +314,97 @@ display:block;
    margin:0 0 25px 0;   
 
 }
+
+.info{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:50%;
+    left:20%;
+    cursor:pointer;
+}
+.message{
+    z-index: 1;
+    color:black;
+    text-align: center;
+    line-height: 25px;
+    font-family: 'Slabo 40px', serif;
+    font-size-adjust: auto;
+}
+
+.bad{
+    color:red;
+font-family:sans-serif;
+font-weight:bold;
+background-color: white;
+}
+
+.good{
+    color:darkgreen;
+font-family:sans-serif;
+font-weight:bold;
+background-color: white;
+}
+#loggedin{
+  z-index: 2; 
+  position:absolute;
+float:left;
+font-size: 25pt;
+font-family: 'Inconsolata', monospace;
+font-weight:700;
+color:#fff;
+margin-top:10px;
+margin-left:20px;
+background-color:darkgrey;
+padding:0 10px;
+}
+#profile a {    
+color:#000;    
+}
+#profile li.active {
+    border-bottom:1vh solid #000;
+}
+.logback{ 
+  position:relative;
+   width:100%; 
+   height:100%;
+   background-image:url(img/6-coffee-splash-banner-background-1.jpg); 
+   background-size:cover;
+   background-repeat: no-repeat;
+   background-position:center center;
+   overflow-x: hidden;
+}
+button{
+    margin:50px 50px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.infopanel{
+ width:50%;
+height:70%;
+position:fixed;
+left:25%;
+bottom:20%;
+background-color:  rgba(250,235,215,0.6);
+border-radius: 10%;
+}
+#userin{
+
+position:absolute;
+float:left;
+font-size: 25pt;
+font-family: 'Inconsolata', monospace;
+font-weight:700;
+color:saddlebrown;
+margin-top:30px;
+margin-left:20px;
+padding:0 10px;
+}
+#ava{
+width:30%;
+height:30%;
+float:left;
+margin-top:80px;
+      border-radius: 50%;
+}
