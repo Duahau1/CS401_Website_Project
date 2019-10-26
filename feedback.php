@@ -24,7 +24,7 @@ echo print_r($_SESSION,1);
             <p>Enter valid email</p>
             <input type="text" name="email" placeholder="Enter your valid email" required value="<?php if (isset($_SESSION['form_data']['email'])){echo $_SESSION['form_data']['email']; }?>" >    
             <p>Your feedback</p>
-            <textarea placeholder="Leave a message" rows="4" cols="100%" name="feed" ><?php  if (isset($_SESSION['form_data']['feed'] )) {echo $_SESSION['form_data']['feed'];}else{echo null;} ?></textarea>
+            <textarea placeholder="Leave a message" rows="4" cols="100%" name="feed" ><?php  if (isset($_SESSION['form_data']['feed'] )) {echo  htmlspecialchars($_SESSION['form_data']['feed']);}else{echo null;} ?></textarea>
             <input name="" type="submit" value="Send">
             </form>
         </div> 
