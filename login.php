@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-echo print_r($_SESSION,1);
+//echo print_r($_SESSION,1);
 ?>
 <html> 
  <head> 
