@@ -67,7 +67,14 @@ public function getLogIn($userName,$passWord){
     }
    
 }
-
+public function saveFeedback($guest,$email,$feedback){
+    $conn = $this-> getConnection();
+    $saveQuery = "insert into Feedback (guest,email,feedback) values (:guest,:email,:feedback)";
+    $q = $conn-> prepare($saveQuery);
+    $q->bindParam(':guest', $guest);
+    $q->bindParam(':email', $email);
+    $q->bindParam(':feedback',$feedback);
+    $q->execute();
+ }
+    
 }
- $dao = new Dao();
- $pro= $dao-> getConnection();

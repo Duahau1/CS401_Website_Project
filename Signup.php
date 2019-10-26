@@ -22,7 +22,7 @@ echo print_r($_SESSION,1);
             <h1>Sign up here</h1>  
             <form method="POST" action="signup_handlers.php" >
             <p>Username</p>
-            <input type="text" name="username" placeholder="Enter your username">
+            <input type="text" name="username" placeholder="Enter your username" value="<?php if (isset($_SESSION['form_data']['username'])){echo $_SESSION['form_data']['username'];} ?>">
             <p>Password</p>
             <input type="password"  name="pswd" placeholder="Enter your password">    
             <p>Repeat Password</p>

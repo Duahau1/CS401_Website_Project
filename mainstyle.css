@@ -330,9 +330,6 @@ display:block;
     line-height: 25px;
     font-family: 'Slabo 40px', serif;
     font-size-adjust: auto;
-    
-   
-
 }
 
 .bad{
@@ -351,7 +348,6 @@ background-color: white;
 #loggedin{
   z-index: 2; 
   position:absolute;
-botton:0;
 float:left;
 font-size: 25pt;
 font-family: 'Inconsolata', monospace;
@@ -377,4 +373,38 @@ color:#000;
    background-repeat: no-repeat;
    background-position:center center;
    overflow-x: hidden;
+}
+button{
+    margin:50px 50px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.infopanel{
+ width:50%;
+height:70%;
+position:fixed;
+left:25%;
+bottom:20%;
+background-color:  rgba(250,235,215,0.6);
+border-radius: 10%;
+}
+#userin{
+
+position:absolute;
+float:left;
+font-size: 25pt;
+font-family: 'Inconsolata', monospace;
+font-weight:700;
+color:saddlebrown;
+margin-top:30px;
+margin-left:20px;
+padding:0 10px;
+}
+#ava{
+width:30%;
+height:30%;
+float:left;
+margin-top:80px;
+      border-radius: 50%;
 }

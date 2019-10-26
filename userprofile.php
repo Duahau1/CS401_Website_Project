@@ -6,6 +6,8 @@ $username=$_SESSION['user'];
 <html> 
  <head> 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
      <meta charset="utf-8" />
           <link rel='icon' href='img/favicon.png' type='image/x-icon'/>
 
@@ -21,8 +23,19 @@ $username=$_SESSION['user'];
   header("Location:login.php");
   }
         ?>
-    <a href="logout.php">Logout</a>
-           
+ 
+ <div class="infopanel">
+      <?php
+    if(isset($_SESSION['user'])){
+           echo "<div class='message' id='userin'>{$_SESSION['user']}</div>";
+     
+    }
+    ?>  
+        <img id="ava"src="img/avatar.png">
+     
+     <button type="button" class="btn btn-outline-primary"><a href="logout.php"> Logout</a></button> 
+       
+        </div>          
 <nav class="navCats" id="profile">
 <ul>
 <li class="active"><a id="logged" href="login.php">USER</a></li>
@@ -37,6 +50,7 @@ $username=$_SESSION['user'];
 <li class=""><a href="mainpage.php">MAIN</a></li>
 <li class=""><a href="feedback.php">FEEDBACK</a></li>
 </ul>
+    
     </body>
     
 </html>

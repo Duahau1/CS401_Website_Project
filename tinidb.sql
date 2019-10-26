@@ -7,8 +7,17 @@ userID int NOT NULL Primary key auto_increment ,
 username VARCHAR(256) NOT NULL,
 passwd VARCHAR(80) NOT NULL
 );
+CREATE TABLE Notes(
+userID int NOT NULL ,
+username VARCHAR(256) NOT NULL,
+url VARCHAR(256) NOT NULL,
+FOREIGN KEY (userID) REFERENCES Users(userID)
+);
 
+CREATE TABLE Feedback(
+guest VARCHAR(256) NOT NULL ,
+email VARCHAR(256) NOT NULL,
+feedback VARCHAR(5000) NOT NULL
+);
+select * from Feedback;
 SELECT * FROM Users;
-
-
-
