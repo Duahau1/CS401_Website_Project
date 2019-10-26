@@ -17,7 +17,6 @@ echo print_r($_SESSION,1);
  </head> 
 <body class="login">
    <div class="loginbox">
-            <img src="iconpasswd.png" class="info" title=" minimum of eight (8) character in length.">  
             <img src="logo.svg" class="logo" id="signuplogo">
             <h1>Sign up here</h1>  
             <form method="POST" action="signup_handlers.php" >
