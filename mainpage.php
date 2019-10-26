@@ -10,7 +10,7 @@ session_start();
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <title>TiniCafe</title>
-   <link rel="stylesheet" type="text/css" href="/CS401Project/mainstyle.css"> 
+    <link rel="stylesheet" type="text/css" href="mainstyle.css"> 
  </head> 
 <body>
 
