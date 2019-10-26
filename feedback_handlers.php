@@ -31,7 +31,8 @@ if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)||empty($_POST['email'])) 
      $_SESSION['messages'] = $messages;
      $_SESSION['sentiment'] = 'bad';
      $_SESSION['form_data'] = $presets;
-     header("Location: http://cs401/feedback.php");
+      header("Location: https://tini-cafe.herokuapp.com/feedback.php");
+         //header("Location: http://cs401/feedback.php");
      exit;
    }
 unset($_SESSION['messages']);
@@ -39,6 +40,7 @@ unset($_SESSION['messages']);
 
 $_SESSION['messages'] = array(" * You have sucessfully submitted your feedback");
  $_SESSION['sentiment'] = 'good';
-   header("Location: http://cs401/feedback.php");
+ header("Location: https://tini-cafe.herokuapp.com/feedback.php");  
+// header("Location: http://cs401/feedback.php");
 ?>
 

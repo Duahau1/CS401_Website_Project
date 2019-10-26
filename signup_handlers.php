@@ -48,7 +48,8 @@ if($u_taken==True){
        unset($presets['confirmed_passwd']);
       $_SESSION['form_data'] = $presets;
        
-     header("Location: http://cs401/Signup.php");
+     header("Location: https://tini-cafe.herokuapp.com/Signup.php");
+      //header("Location: http://cs401/Signup.php");
      exit;
    }
 unset($_SESSION['messages']);
@@ -57,6 +58,7 @@ $info="Click"."<a href=\"login.php\"> here </a>". " to Log In ";
 $_SESSION['userinfo'] = array("{$user}");
 $_SESSION['messages'] = array(" * Your account has been created {$info}");
  $_SESSION['sentiment'] = 'good';
-   header("Location: http://cs401/Signup.php");
+ header("Location: https://tini-cafe.herokuapp.com/Signup.php");   
+//header("Location: http://cs401/Signup.php");
 ?>
 
