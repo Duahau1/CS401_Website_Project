@@ -1,13 +1,13 @@
 <?php 
 class Dao {
-private $host = 'us-cdbr-iron-east-05.cleardb.net';
-private $dbname = 'heroku_53c97d8b4cb9a9c';
-private $username = 'bc4ffc071cc75d';
-private $password = '8239e824';
+private $host = 'localhost';
+private $dbname = 'CS401';
+private $username = 'vannguyen';
+private $password = 'Denny';
 
  public function getConnection() {
     try {
-       $connection = new PDO("mysql:host={$this->host};port=3306;dbname={$this->dbname}", $this->username, $this->password);
+       $connection = new PDO("mysql:host={$this->host};port=3308;dbname={$this->dbname}", $this->username, $this->password);
     } catch (Exception $e) {
       echo print_r($e,1);
     }
