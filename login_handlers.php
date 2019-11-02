@@ -14,7 +14,8 @@ if($validation==False){
     $_SESSION['notifications'] = $notifications;
     $_SESSION['sentiment'] = 'bad';
     $_SESSION["access_granted"] = false;
-     header("Location: http://cs401/login.php");
+     header("Location: https://tini-cafe.herokuapp.com/login.php"); 
+    //header("Location: http://cs401/login.php");
      exit;
 }
 else{
@@ -22,7 +23,8 @@ else{
 }
 unset($_SESSION['notifications']);
 $_SESSION['user']=$user;
-header("Location: http://cs401/mainpage.php");
+ header("Location: https://tini-cafe.herokuapp.com/mainpage.php");
+//header("Location: http://cs401/mainpage.php");
 
 
 ?>

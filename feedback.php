@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-echo print_r($_SESSION,1);
+//echo print_r($_SESSION,1);
 ?>
 <html> 
  <head> 
@@ -11,7 +11,7 @@ echo print_r($_SESSION,1);
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <title>TiniCafe</title>
-    <link rel="stylesheet" type="text/css" href="mainstyle.css"> 
+    <link rel="stylesheet" type="text/css" href="/mainstyle.css"> 
  </head> 
 <body class="login">
    <div class="loginbox">
@@ -24,7 +24,7 @@ echo print_r($_SESSION,1);
             <p>Enter valid email</p>
             <input type="text" name="email" placeholder="Enter your valid email" required value="<?php if (isset($_SESSION['form_data']['email'])){echo $_SESSION['form_data']['email']; }?>" >    
             <p>Your feedback</p>
-            <textarea placeholder="Leave a message" rows="4" cols="100%" name="feed" ><?php  if (isset($_SESSION['form_data']['feed'] )) {echo $_SESSION['form_data']['feed'];}else{echo null;} ?></textarea>
+            <textarea placeholder="Leave a message" rows="4" cols="100%" name="feed" ><?php  if (isset($_SESSION['form_data']['feed'] )) {echo  htmlspecialchars($_SESSION['form_data']['feed']);}else{echo null;} ?></textarea>
             <input name="" type="submit" value="Send">
             </form>
         </div> 

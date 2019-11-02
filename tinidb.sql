@@ -7,11 +7,11 @@ userID int NOT NULL Primary key auto_increment ,
 username VARCHAR(256) NOT NULL,
 passwd VARCHAR(80) NOT NULL
 );
+
 CREATE TABLE Notes(
-userID int NOT NULL ,
 username VARCHAR(256) NOT NULL,
 url VARCHAR(256) NOT NULL,
-FOREIGN KEY (userID) REFERENCES Users(userID)
+FOREIGN KEY (username) REFERENCES Users(username)
 );
 
 CREATE TABLE Feedback(
