@@ -2,6 +2,8 @@
 <?php
 session_start();
 $username=$_SESSION['user'];
+require_once "Dao.php";
+$dao = new Dao();
 $like= $dao->getObj($dao->getId($username));
 $note=$dao->isIDExistNote($dao->getId($username)) ;
 $exist=$dao->isIDExist($dao->getId($username)) ;
@@ -41,8 +43,7 @@ $exist=$dao->isIDExist($dao->getId($username)) ;
       if($note==true){
   
     foreach ($like as $like) {
-       echo "<a class=\"amazon\" > <img class=\"list\" src=\"$like\" /> </a> ";
-        
+       echo "<a class=\"amazon\" > <img class=\"list\" src=\"$like\" /> </a> ";  
     }         
    
       }
@@ -66,7 +67,7 @@ $exist=$dao->isIDExist($dao->getId($username)) ;
 <li class=""><a href="mainpage.php">MAIN</a></li>
 <li class=""><a href="feedback.php">FEEDBACK</a></li>
 </ul>
-    
+        </nav>
     </body>
     
 </html>
