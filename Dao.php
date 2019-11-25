@@ -52,6 +52,16 @@ public function saveUser($userName,$passWord){
         }
         
     }
+         public function getId($userName){
+         $conn = $this-> getConnection();
+         $sql="select userID from Users where username=:userName";
+         $q = $conn-> prepare($sql);
+         $q->bindParam(':userName', $userName);
+         $q->execute();
+         $res=$q->fetchColumn();   
+         return $res;
+    }
+    
 public function getLogIn($userName,$passWord){
     $conn = $this-> getConnection(); 
     $sql="select passwd from Users where username=:userName" ;
