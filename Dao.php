@@ -76,5 +76,70 @@ public function saveFeedback($guest,$email,$feedback){
     $q->bindParam(':feedback',$feedback);
     $q->execute();
  }
-    
+public function isIDExist($id){
+         $conn = $this-> getConnection();
+         $sql="select userID from product where userID=:id";
+         $q = $conn-> prepare($sql);
+         $q->bindParam(':id', $id);
+         $q->execute();
+         $count=$q->rowCount();
+         echo $count;
+         if($count>0){
+             return true;
+         }
+        else{
+            return false;
+        }
+        
+}
+     public function isIDExistNote($id){
+         $conn = $this-> getConnection();
+         $sql="select userID from addedProduct where userID=:id";
+         $q = $conn-> prepare($sql);
+         $q->bindParam(':id', $id);
+         $q->execute();
+         $count=$q->rowCount();
+         if($count>0){
+             return true;
+         }
+        else{
+            return false;
+        }
+        
+}
+ public function saveObj ($id, $obj, $imagePath) {
+    $conn = $this->getConnection();
+    $saveQuery = "INSERT INTO addedProduct (userID, obj, image_path) VALUES (:id, :obj, :imagePath)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":id", $id);
+    $q->bindParam(":obj", $obj);
+    $q->bindParam(":imagePath", $imagePath);
+    $q->execute();
+  }
+  public function getObj ($id) {
+    $conn = $this->getConnection();
+    $getQuery = "SELECT image_path FROM addedProduct WHERE userID =:id";
+    $q = $conn->prepare($getQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    $obj=$q->fetchAll(PDO::FETCH_COLUMN);
+    return $obj;
+
+  }
+public function checkObject($id,$obj){
+     $conn = $this->getConnection();
+    $getQuery = "SELECT obj FROM addedProduct WHERE  userID=:id and obj=:obj ";
+    $q = $conn->prepare($getQuery);
+    $q->bindParam(":id", $id);
+    $q->bindParam(":obj", $obj);
+    $q->execute();
+      $count=$q->rowCount();
+    if($count>0){
+             return true;
+         }
+        else{
+            return false;
+        }
+}
+      
 }
