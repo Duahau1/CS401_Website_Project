@@ -92,7 +92,7 @@ public function isIDExist($id){
         }
         
 }
-     public function isIDExistNote($id){
+public function isIDExistNote($id){
          $conn = $this-> getConnection();
          $sql="select userID from addedProduct where userID=:id";
          $q = $conn-> prepare($sql);

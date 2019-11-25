@@ -4,9 +4,7 @@ $username=$_SESSION['user'];
 require_once "Dao.php";
 $dao = new Dao();
 $like= $dao->getObj($dao->getId($username));
-$note=$dao->isIDExistNote($dao->getId($username)) ;
-$exist=$dao->isIDExist($dao->getId($username)) ;
-
+$note=$dao->isIDExistNote($dao->getId($username));
 ?>
 <html> 
  <head> 
