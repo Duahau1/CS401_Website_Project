@@ -2,6 +2,10 @@
 <?php
 session_start();
 $username=$_SESSION['user'];
+$like= $dao->getObj($dao->getId($username));
+$note=$dao->isIDExistNote($dao->getId($username)) ;
+$exist=$dao->isIDExist($dao->getId($username)) ;
+
 ?>
 <html> 
  <head> 
@@ -31,7 +35,19 @@ $username=$_SESSION['user'];
      
     }
     ?>  
-        <img id="ava"src="img/avatar.png">
+        <img class="ava"src="img/avatar.png">
+       <?php
+ 
+      if($note==true){
+  
+    foreach ($like as $like) {
+       echo "<a class=\"amazon\" > <img class=\"list\" src=\"$like\" /> </a> ";
+        
+    }         
+   
+      }
+     
+     ?>
      
      <button type="button" class="btn btn-outline-primary"><a href="logout.php"> Logout</a></button> 
        
