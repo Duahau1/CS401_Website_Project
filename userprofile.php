@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 session_start();
 $username=$_SESSION['user'];
@@ -38,17 +37,7 @@ $exist=$dao->isIDExist($dao->getId($username)) ;
     }
     ?>  
         <img class="ava"src="img/avatar.png">
-       <?php
- 
-      if($note==true){
-  
-    foreach ($like as $like) {
-       echo "<a class=\"amazon\" > <img class=\"list\" src=\"$like\" /> </a> ";  
-    }         
-   
-      }
-     
-     ?>
+       
      
      <button type="button" class="btn btn-outline-primary"><a href="logout.php"> Logout</a></button> 
        
