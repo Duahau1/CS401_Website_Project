@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <?php
 session_start();
-<<<<<<< HEAD
+
  if(isset($_SESSION['user'])){
 $username=$_SESSION['user'];
  }
+
 $obj="coldbrew";
-=======
->>>>>>> f8460eafdd1c16e744f6ae15e307109ee16cb522
+
 ?>
 <html>
  <head>
