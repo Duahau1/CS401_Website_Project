@@ -242,7 +242,13 @@ textarea{
     height:20%;
     z-index: 2;
 }
-
+.hotspot4 {
+    position: absolute;
+    left: 9%;
+    top: 33%;
+    height: 20%;
+    z-index: 2;
+}
 #closeButton {
     position: absolute;
     right: 40px;
