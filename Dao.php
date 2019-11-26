@@ -11,8 +11,6 @@ private $password = "8239e824";
     } catch (Exception $e) {
       echo print_r($e,1);
     }
-    echo print_r("Connection Success",1);
-
      return $connection;
   } 
  
