@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+ if(isset($_SESSION['user'])){
+$username=$_SESSION['user'];
+ }
+$obj="coldbrew";
+?>
 <html>
  <head>
      <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
@@ -34,7 +41,7 @@
     </div>
     <a href="../mainpage.php"> <img src="../img/x.svg" alt="X" id="closeButton"></a>
     <div class="tooltip">
-    <a href="#"> <img src="../img/add.png" alt="X" id="addButton"></a>
+    <a href=<?php if(isset($username)){echo " add_handler.php?username={$username}&obj={$obj}";}?>> <img src="../img/add.png" alt="X" id="addButton"></a>
         <span class="tooltiptext">Add to your repository</span> </div>
 
     </body>
