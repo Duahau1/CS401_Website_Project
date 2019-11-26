@@ -8,7 +8,8 @@ $note=$dao->isIDExistNote($dao->getId($username));
 ?>
 <html> 
  <head> 
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
      <meta charset="utf-8" />
@@ -35,7 +36,17 @@ $note=$dao->isIDExistNote($dao->getId($username));
     }
     ?>  
         <img class="ava"src="img/avatar.png">
-       
+     <?php
+     
+      if($note==true){
+  
+    foreach ($like as $like) {
+       echo "<a class=\"amazon\" > <img class=\"list\" src=\"$like\" /> </a> ";
+        
+    }         
+      }
+     
+     ?>  
      
      <button type="button" class="btn btn-outline-primary"><a href="logout.php"> Logout</a></button> 
        
@@ -55,6 +66,20 @@ $note=$dao->isIDExistNote($dao->getId($username));
 <li class=""><a href="feedback.php">FEEDBACK</a></li>
 </ul>
         </nav>
+         <script>
+        var original ;
+ $(".list").mouseenter(function () {
+        original = $(this).attr('src');
+        $(".amazon").attr("href","https://www.amazon.com/hz/wishlist/ls/1B0P7DI9Z3FZ3?ref_=wl_share");
+        $(this).attr("src", "img/add.png");
+    });                
+                 
+$(".list").mouseleave(function () {
+       $(this).animate({opacity:1}, 500);
+       $(this).attr("src", original);
+    });             
+        </script>
+           
     </body>
     
 </html>
